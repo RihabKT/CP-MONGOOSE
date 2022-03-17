@@ -126,6 +126,7 @@ router.delete("/:fullname",(req,res) => {
     Person.remove({fullname})
 
     .then(() => res.send("P.S: PERSONS HAVE BEEN REMOVED!"))
+    .catch(err => res.send(err))
 })
 
 //Chain Search Query Helpers to Narrow Search Results
